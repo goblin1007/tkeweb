@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>BAN GIÁM HIỆU</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <section>
+    <h2>BAN GIÁM HIỆU</h2>
+
+    <div class="highlight">
+      <p><strong>Địa chỉ:</strong> Tầng 1 nhà I - Trường Đại học Thương mại</p>
+      <p><strong>Điện thoại:</strong> (04) 3834 0687</p>
+      <p><strong>Fax:</strong> 04.3764 3228</p>
+    </div>
+
+    <div id="membersContainer" class="members"></div>
+  </section>
+
+  <script>
+   const members = [
+  {
+    name: "PGS.TS Nguyễn Hoàng",
+    role: "Thành viên",
+    img: url('cơ cấu /img/pgs_ts_nguyen_hoang.jpeg');
+  },
+  {
+    name: "GS.TS Nguyễn Hoàng Việt",
+    role: "Thành viên",
+    img: "https://tmu.edu.vn/upload/organizationalstructure/original/organizational-structure-1684989091.JPG"
+  },
+  {
+    name: "PGS.TS Nguyễn Đức Nhuận",
+    role: "Thành viên",
+    img: "https://tmu.edu.vn/upload/organizationalstructure/original/organizational-structure-1659149676.jpg"
+  },
+  {
+    name: "PGS.TS Hà Văn Sự",
+    role: "Thành viên",
+    img: "https://tmu.edu.vn/upload/organizationalstructure/original/organizational-structure-1710944935.jpeg"
+  }
+];
+
+
+    function renderMembers() {
+      const container = document.getElementById("membersContainer");
+      container.innerHTML = "";
+
+      members.forEach(member => {
+        const div = document.createElement("div");
+        div.className = "member";
+        div.innerHTML = `
+          <img src="${member.img}" alt="${member.name}">
+          <p><strong>${member.name}</strong><br>${member.role}</p>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", renderMembers);
+  </script>
+
+</body>
+</html>

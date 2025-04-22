@@ -564,9 +564,13 @@ header{
 }
 
 .main-footer{
-    background-image: url("../img/bg-footer.jpg");
+    background-image: url("/assets/img/bg-footer.jpg");
    padding: 50px 0 70px 0;
+   
+    background: #ce1a1a;
+    color: white; /* Đảm bảo chữ dễ nhìn trên nền tối */
 }
+
 
 
 .logo-ft img{
@@ -608,6 +612,7 @@ header{
     font-size: 15px;
     font-weight: 400;
 }
+
 
 .add-ft{
     margin-left: 20px;
