@@ -7,12 +7,10 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
+
     <title><?= $row['tieu_de'] ?></title>
 
+    <link rel="stylesheet" href="news_detail.css">
 </head>
 <body>
 
@@ -30,5 +28,4 @@ $row = $result->fetch_assoc();
         <?= nl2br($row['noidung']) ?>
     </div>
 
-</body>
-</html>
+
